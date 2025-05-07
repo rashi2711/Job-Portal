@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shadow-glow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.shadow-glow:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2), 0 0 15px rgba(236, 72, 153, 0.5);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #f472b6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-button {
+  background: linear-gradient(90deg, #3b82f6, #ec4899);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.dark .gradient-button {
+  background: linear-gradient(90deg, #60a5fa, #f472b6);
+}
+
+.gradient-button:hover {
+  background: linear-gradient(90deg, #ec4899, #3b82f6);
+  transform: scale(1.05);
+}
+
+.dark .gradient-button:hover {
+  background: linear-gradient(90deg, #f472b6, #60a5fa);
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #3b82f6, #ec4899) border-box;
+}
+
+.dark .border-gradient {
+  background: linear-gradient(black, black) padding-box, linear-gradient(90deg, #f472b6, #60a5fa) border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.dark input:focus, .dark select:focus, .dark textarea:focus {
+  box-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-section {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.item-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
